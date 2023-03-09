@@ -1,3 +1,0 @@
-Console.WriteLine("Введите ваше имя");
-String name = Console.ReadLine();
-Console.WriteLine($"{name}, привет");

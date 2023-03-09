@@ -1,0 +1,12 @@
+namespace Домашняя_работа__1
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Введите ваше имя");
+            String name = Console.ReadLine();
+            Console.WriteLine($"{name}, привет");
+        }
+    }
+}
