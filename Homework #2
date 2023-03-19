@@ -1,0 +1,51 @@
+namespace Домашняя_работ_2
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int n, FMax, SMax;
+
+            Console.WriteLine("Введите количество элеменов массива");
+            try
+            {
+                n = Convert.ToInt32(Console.ReadLine());
+
+                int[] counts = new int[n];
+
+                Console.WriteLine("Введите элементы массива");
+
+                for (int i = 0; i < n; i++)
+                {
+                    counts[i] = Convert.ToInt32(Console.ReadLine());
+                }
+
+                FMax = counts[0];
+
+                for (int i = 0; i < n; i++)
+                {
+                    if (FMax < counts[i])
+                    {
+                        FMax = counts[i];
+                    }
+                }
+
+                SMax = counts[0];
+
+                for (int i = 0; i < n; i++)
+                {
+                    if (SMax < counts[i] && counts[i] < FMax)
+                    {
+                        SMax = counts[i];
+                    }
+                }
+
+                Console.WriteLine($"Первое максимальное = {FMax} \nВторое максимальное = {SMax}");
+            }
+            catch (FormatException)
+            {
+                Console.WriteLine("ERROR: Некорректный формат данных");
+            }
+        }
+    }
+}
