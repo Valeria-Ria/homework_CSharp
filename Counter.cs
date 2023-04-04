@@ -10,7 +10,7 @@ public class Counter
         for (int i = 0; i < 100; i++)
         {
             Console.WriteLine($"Сейчас {i}");
-            if (i == 23)
+            if (i == 77)
             {
                 CountedTo();
                 break;
